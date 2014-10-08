@@ -1,0 +1,37 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<!-- 标签管理 -->
+<struts>
+    <package name="tag_json" extends="json-default">
+		<action name="getTagAction" method="queryAll" class="com.home.web.TagAction">
+    		 <result name="success" type="json"></result>  
+    	</action>
+    	
+    	<!-- 保存  -->
+		<action name="tagSaveAction" method="save" class="com.home.web.TagAction">
+    		<result name="success" type="json"></result>
+		</action>
+    	<!-- 修改  -->
+		<action name="tagEditAction" method="edit" class="com.home.web.TagAction">
+    		<result name="success" type="json"></result>
+		</action>
+		<!-- 删除 -->
+		<action name="tagDelAction" method="del" class="com.home.web.TagAction">
+    		<result name="success" type="json"></result>
+		</action>
+    </package>
+	<package name="tag_jsp" extends="struts-default">
+		
+		<!-- 标签管理控制台  -->
+		<action name="TAG_ACTION_CONSOLE" method="forSend" class="com.home.web.TagAction">
+			<result>/ui/tagLayout.jsp</result>
+		</action>
+		
+		<action name="tagShow" method="view" class="com.home.web.TagAction">
+			<result>/ui/tagEntity.jsp</result>
+			<result name="view">/ui/tagView.jsp</result>
+		</action>
+	</package>
+</struts>

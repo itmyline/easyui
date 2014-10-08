@@ -1,0 +1,68 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<!-- 分类管理 -->
+<struts>
+    <package name="category_json" extends="json-default">
+		
+		<action name="getCategoryAction" method="queryAll" class="com.home.web.CategoryAction">
+    		 <result name="success" type="json"></result>  
+    	</action>
+		
+		<!-- 保存  -->
+		<action name="categorySaveAction" method="save" class="com.home.web.CategoryAction">
+    		<result name="success" type="json"></result>
+		</action>
+		<!-- 修改  -->
+		<action name="categoryEditAction" method="edit" class="com.home.web.CategoryAction">
+    		<result name="success" type="json"></result>
+		</action>
+		<!-- 删除 -->
+		<action name="categoryDelAction" method="del" class="com.home.web.CategoryAction">
+    		<result name="success" type="json"></result>
+		</action>
+		
+    </package>
+	<package name="category_jsp" extends="struts-default">
+		
+		<!-- 分类管理控制台  -->
+		<action name="CATEGORY_ACTION_CONSOLE" method="forSend" class="com.home.web.CategoryAction">
+			<result>/ui/categoryLayout.jsp</result>
+		</action>
+		
+		<action name="categoryShow" method="view" class="com.home.web.CategoryAction">
+			<result>/ui/categoryEntity.jsp</result>
+			<result name="view">/ui/categoryView.jsp</result>
+		</action>
+		
+		<action name="CONSOLE">
+			<result>/ui/index.jsp</result>
+		</action>
+		
+		<!-- 程序人生 -->
+		<action name="programLife" method="forSendProgramLife" class="com.home.web.ArticleAction">
+			<result>/web/programLife.jsp</result>
+		</action>
+		<!-- 快乐码农 -->
+		<action name="happyCode" method="forSendHappyCode" class="com.home.web.ArticleAction">
+			<result>/web/happyCode.jsp</result>
+		</action>
+		<!-- 学无止境 -->
+		<action name="knowledge" method="forSendKnowledge" class="com.home.web.ArticleAction">
+			<result>/web/knowledge.jsp</result>
+		</action>
+		
+		<action name="detail" method="detail" class="com.home.web.ArticleAction">
+			<result>/web/detail.jsp</result>
+		</action>
+		<action name="detail2" method="detail" class="com.home.web.ArticleAction">
+			<result>/web/detail2.jsp</result>
+		</action>
+		
+		<action name="about" method="about" class="com.home.web.ArticleAction">
+			<result>/web/about.jsp</result>
+		</action>
+		
+	</package>
+</struts>

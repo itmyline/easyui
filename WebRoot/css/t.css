@@ -1,0 +1,95 @@
+element.style {
+}
+nginx-2media="all"
+.d_postlist .text {
+margin: 5px 0 0 20px;
+display: block;
+height: 50px;
+}
+Pseudo element
+nginx-2media="all"
+::selection {
+background: #72d0eb;
+color: #fff;
+text-shadow: none;
+}
+Inherited from a
+nginx-2media="all"
+.d_postlist li a:hover {
+color: #d9534f;
+}
+nginx-2media="all"
+.d_postlist li a {
+padding: 5px 0 15px 90px;
+border-bottom: solid 1px #eee;
+overflow: hidden;
+position: relative;
+display: block;
+font-size: 14px;
+}
+nginx-2media="all"
+a:hover, a:focus {
+color: #007046;
+text-decoration: none;
+}
+nginx-2media="all"
+a {
+color: #00a67c;
+text-decoration: none;
+}
+user agent stylesheeta:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+Inherited from li
+nginx-2media="all"
+li {
+line-height: 20px;
+}
+user agent stylesheetli {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+Inherited from ul
+nginx-2media="all"
+ul, ol {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+user agent stylesheetul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+Inherited from section.container
+nginx-2media="all"
+.container {
+max-width: 1226px;
+margin: 0 auto;
+text-align: left;
+position: relative;
+}
+Inherited from body.archive.tag.tag-nginx-2.tag-131.logged-in
+nginx-2media="all"
+body {
+margin: 0;
+font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 20px;
+color: #555;
+background-color: #eee;
+overflow-x: hidden;
+}
+Inherited from html
+nginx-2media="all"
+html {
+font-size: 100%;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}

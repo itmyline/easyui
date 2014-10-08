@@ -1,0 +1,23 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<!-- 文章管理 -->
+<struts>
+    <package name="article_json" extends="json-default">
+		<action name="getArticleAction" method="queryAll" class="com.home.web.ArticleAction">
+    		 <result name="success" type="json"></result>  
+    	</action>
+    </package>
+	<package name="article_jsp" extends="struts-default">
+		
+		<!-- 标签管理控制台  -->
+		<action name="ARTICLE_ACTION_CONSOLE" method="forSend" class="com.home.web.ArticleAction">
+			<result>/ui/articleLayout.jsp</result>
+		</action>
+		<action name="articleShow" method="view" class="com.home.web.ArticleAction">
+			<result>/ui/articleEntity.jsp</result>
+			<result name="view">/ui/tagView.jsp</result>
+		</action>
+	</package>
+</struts>
